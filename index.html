@@ -25,13 +25,20 @@
   <header class="header">
     <div class="container">
       <a class="logo" href="#home">A.H.K. Zihan</a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav main-nav" aria-label="Primary">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      <div class="header-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -39,7 +46,7 @@
   <section id="home" class="hero">
     <div class="container">
       <h1>Hi, I’m <span class="accent">Arif Hossain Khan Zihan</span> 👋</h1>
-      <p>Final-year ICT student (Computer Science major) at the University of Tasmania, with a strong foundation in software development, cloud systems, and data integration. Seeking an entry-level role to apply my skills to real-world products. :contentReference[oaicite:1]{index=1}</p>
+      <p>Web Developer | IT Support Specialist </p>
       <div class="cta">
         <a href="#projects" class="btn">View Projects</a>
         <a href="assets/Resume.pdf" class="btn ghost">Download Résumé (PDF)</a>
@@ -51,7 +58,8 @@
   <section id="about" class="about">
     <div class="container">
       <h2>About</h2>
-      <p>
+      <p>Final-year ICT student (Computer Science major) at the University of
+         Tasmania, with a strong foundation in software development, cloud systems, and data integration. Seeking an entry-level role to apply my skills to real-world products.
         I enjoy building practical, user-focused solutions across web, data, and systems. Comfortable across the stack and excited by
         learning curves and teamwork.
       </p>
@@ -74,7 +82,7 @@
 
           <h3>Experience</h3>
           <ul class="list">
-            <li><strong>Digital Solutions Intern</strong>, TasWaste South — Jul 2025–Current. Evaluated waste-related apps, analysed cost/usability/privacy, and engaged stakeholders. :contentReference[oaicite:4]{index=4}</li>
+            <li><strong>Digital Solutions Intern</strong>, TasWaste South — Jul 2025–Current. Evaluated waste-related apps, analysed cost/usability/privacy, and engaged stakeholders. </li>
             <li><strong>Fresh Service Team Member</strong>, Woolworths Supermarkets — 2023–Current. Customer service, stock/quality, food safety, teamwork. :contentReference[oaicite:5]{index=5}</li>
           </ul>
 
@@ -98,7 +106,7 @@
       <div class="grid">
         <article class="card">
           <h3>AR-Based Interactive Visual Programming App</h3>
-          <p>Unity + Vuforia app that teaches programming to young students with real-time feedback, execution simulation, and interactive scanning. Built UI with Unity UI and C# scripts. :contentReference[oaicite:10]{index=10}</p>
+          <p>Unity + Vuforia app that teaches programming to young students with real-time feedback, execution simulation, and interactive scanning. Built UI with Unity UI and C# scripts. </p>
           <div class="actions">
             <a class="btn small" href="https://drive.google.com/file/d/1Hem-P0OEOpL1H1tnzORVA8j9J5ZWUchD/view?usp=drive_link" target="_blank" rel="noopener">APK</a>
           </div>
@@ -106,7 +114,7 @@
 
         <article class="card">
           <h3>Formula 1 Timing System</h3>
-          <p>Web app for managing race data with RESTful APIs (hosted on Azure VM). Frontend JS with interactive features; PHP scraper for official site data. :contentReference[oaicite:11]{index=11}</p>
+          <p>Web app for managing race data with RESTful APIs (hosted on Azure VM). Frontend JS with interactive features; PHP scraper for official site data. </p>
           <div class="actions">
             <a class="btn small" href="https://github.com/ahkzihan/Formula-1-Timing-System" target="_blank" rel="noopener">Source Code</a>
           </div>
@@ -114,7 +122,15 @@
 
         <article class="card">
           <h3>Recycle It Right App</h3>
-          <p>Led UI/UX with PACT analysis; progressed from low to high fidelity; created black-box test cases for core features. :contentReference[oaicite:12]{index=12}</p>
+          <p>Led UI/UX with PACT analysis; progressed from low to high fidelity; created black-box test cases for core features.</p>
+        </article>
+
+        <article class="card">
+          <h3>Formula 1 Website Scraper</h3>
+          <p>A Python script that scrapes the official Formula 1 website for race data, demonstrating web scraping and data extraction techniques.</p>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/ahkzihan/Formula-1-Website-Scraper" target="_blank" rel="noopener">Source Code</a>
+          </div>
         </article>
       </div>
     </div>
@@ -131,7 +147,7 @@
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arif-hossain-khan-zihan-5a380b237/" target="_blank" rel="noopener">arif-hossain-khan-zihan</a></li>
         <li><strong>Location:</strong> Kingston, TAS 7050</li>
       </ul>
-      <p class="fine-print">Contact details sourced from your resume. :contentReference[oaicite:13]{index=13}</p>
+      
     </div>
   </section>
 
@@ -176,6 +192,28 @@
         setIcon();
       });
       setIcon();
+    })();
+  </script>
+
+  <script>
+    // Hamburger menu
+    (function(){
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.querySelector('.main-nav');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+  <script>
+    // Set current year in footer
+    (function(){
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
     })();
   </script>
 </body>
