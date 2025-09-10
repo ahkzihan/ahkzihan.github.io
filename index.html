@@ -16,6 +16,28 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Scrollbar styles for Webkit browsers */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000000; /* Dark background */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #a5b4fc; /* Light bar */
+      border-radius: 5px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    /* Scrollbar styles for Firefox */
+    html {
+      scrollbar-color: #a5b4fc #000000; /* thumb and track color */
+      scrollbar-width: thin;
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="icon" href="data:," />
