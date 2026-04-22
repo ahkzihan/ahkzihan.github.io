@@ -40,6 +40,7 @@
     }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
   <link rel="icon" href="data:," />
   <script>
     // Theme: load saved preference early to avoid flash
@@ -164,53 +165,78 @@
   <!-- Projects -->
   <section id="projects" class="py-16 fade-in-section text-white">
     <div class="max-w-screen-lg mx-auto px-5">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-cyan-300">Projects</h2>
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-cyan-300">Featured Projects</h2>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <article class="bg-black/20 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">AR-Based Interactive Visual Programming App</h3>
-            <p class="text-gray-300 mb-4">Unity + Vuforia app that teaches programming to young students with real-time feedback, execution simulation, and interactive scanning. Built UI with Unity UI and C# scripts. </p>
-            <div class="flex gap-4">
-              <a class="inline-block font-bold px-4 py-2 rounded-lg bg-white text-gray-800 text-sm" href="https://drive.google.com/file/d/1Hem-P0OEOpL1H1tnzORVA8j9J5ZWUchD/view?usp=drive_link" target="_blank" rel="noopener">APK</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
+        <!-- AR App - Spans 2 columns -->
+        <article class="md:col-span-2 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all hover:border-indigo-500/50 flex flex-col justify-between" data-tilt>
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">AR-Based Interactive Visual Programming</h3>
+              <span class="bg-indigo-500/20 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-full border border-indigo-500/30 text-nowrap">AR/VR</span>
             </div>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Unity + Vuforia app teaching programming concepts through interactive 3D scanning and execution simulation. Designed with a focus on intuitive UI/UX for young learners.</p>
+          </div>
+          <div class="flex flex-wrap gap-4 mt-auto">
+            <a class="inline-flex items-center gap-2 font-bold px-5 py-2.5 rounded-xl bg-white text-gray-900 hover:bg-gray-100 transition-colors text-sm" href="https://drive.google.com/file/d/1Hem-P0OEOpL1H1tnzORVA8j9J5ZWUchD/view?usp=drive_link" target="_blank" rel="noopener">
+              Download APK <i class="devicon-android-plain"></i>
+            </a>
+            <span class="text-gray-400 text-sm flex items-center gap-2 italic">Built with Unity & C#</span>
           </div>
         </article>
 
-        <article class="bg-black/20 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Formula 1 Timing System</h3>
-            <p class="text-gray-300 mb-4">Web app for managing race data with RESTful APIs (hosted on Azure VM). Frontend JS with interactive features; PHP scraper for official site data. </p>
-            <div class="flex gap-4">
-              <a class="inline-block font-bold px-4 py-2 rounded-lg border border-white text-white text-sm" href="https://github.com/ahkzihan/Formula-1-Timing-System" target="_blank" rel="noopener">Source Code</a>
+        <!-- F1 Timing System -->
+        <article class="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all hover:border-cyan-500/50 flex flex-col" data-tilt>
+          <div class="mb-4">
+            <h3 class="text-xl font-bold mb-2">F1 Timing System</h3>
+            <p class="text-gray-400 text-sm mb-4">Web app for managing race data with RESTful APIs (hosted on Azure VM). Frontend JS with interactive features; PHP scraper for official site data.</p>
+          </div>
+          <div class="mt-auto space-y-4">
+            <div class="flex flex-wrap gap-2">
+
             </div>
+            <a class="inline-flex items-center gap-2 font-bold text-cyan-300 hover:text-cyan-200 transition-colors text-sm" href="https://github.com/ahkzihan/Formula-1-Timing-System" target="_blank" rel="noopener">
+              Source Code <i class="devicon-github-original"></i>
+            </a>
           </div>
         </article>
 
-                <article class="bg-black/20 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Tradie App</h3>
-            <p class="text-gray-300 mb-4"> Developed a full-stack project management web app for tradespeople using Next.js 15 Payload CMS, Tailwind CSS and PostgreSQL. </p>
-            <div class="flex gap-4">
-              <a class="inline-block font-bold px-4 py-2 rounded-lg border border-white text-white text-sm" href="https://mis-tradie-c25x5wyqd-ahkzihans-projects.vercel.app/" target="_blank" rel="noopener">Web App</a>
+        <!-- Tradie App -->
+        <article class="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all hover:border-emerald-500/50 flex flex-col" data-tilt>
+          <div class="mb-4">
+            <h3 class="text-xl font-bold mb-2 text-emerald-300">Tradie App</h3>
+            <p class="text-gray-400 text-sm mb-4">Developed a full-stack project management web app for tradespeople using Next.js 15 Payload CMS, Tailwind CSS and PostgreSQL.</p>
+          </div>
+          <div class="mt-auto space-y-4">
+            <div class="flex flex-wrap gap-2">
+
             </div>
+            <a class="inline-flex items-center gap-2 font-bold text-white bg-emerald-600/20 border border-emerald-500/30 px-4 py-2 rounded-lg hover:bg-emerald-600/30 transition-colors text-sm" href="https://mis-tradie-c25x5wyqd-ahkzihans-projects.vercel.app/" target="_blank" rel="noopener">
+              Live Demo <i class="devicon-nextjs-original"></i>
+            </a>
           </div>
         </article>
 
-        <article class="bg-black/20 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Recycle It Right App</h3>
-            <p class="text-gray-300">Led UI/UX with PACT analysis; progressed from low to high fidelity; created black-box test cases for core features.</p>
+        <!-- Recycle It Right -->
+        <article class="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all hover:border-orange-500/50 flex flex-col" data-tilt>
+          <h3 class="text-xl font-bold mb-2">Recycle It Right App</h3>
+          <p class="text-gray-400 text-sm">Led UI/UX with PACT analysis; progressed from low to high fidelity; created black-box test cases for core features.</p>
+          <div class="mt-auto pt-4">
+
           </div>
         </article>
 
-        <article class="bg-black/20 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Formula 1 Website Scraper</h3>
-            <p class="text-gray-300 mb-4">A Python script that scrapes the official Formula 1 website for race data, demonstrating web scraping and data extraction techniques.</p>
-            <div class="flex gap-4">
-              <a class="inline-block font-bold px-4 py-2 rounded-lg border border-white text-white text-sm" href="https://github.com/ahkzihan/Formula-1-Website-Scraper" target="_blank" rel="noopener">Source Code</a>
+        <!-- F1 Scraper -->
+        <article class="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all hover:border-red-500/50 flex flex-col" data-tilt>
+          <h3 class="text-xl font-bold mb-2">Formula 1 Website Scraper</h3>
+          <p class="text-gray-400 text-sm mb-4">A php script that scrapes the official Formula 1 website for race data, demonstrating web scraping and data extraction techniques.</p>
+          <div class="mt-auto space-y-4">
+            <div class="flex flex-wrap gap-2">
+
             </div>
+            <a class="inline-flex items-center gap-2 font-bold text-red-300 hover:text-red-200 transition-colors text-sm" href="https://github.com/ahkzihan/Formula-1-Website-Scraper" target="_blank" rel="noopener">
+              View Scraper <i class="devicon-php-plain"></i>
+            </a>
           </div>
         </article>
       </div>
@@ -298,8 +324,18 @@
   </script>
 
   <script>
-    // Scroll Animations
+    // Scroll Animations + Tilt Init
     (function(){
+      // Initialize Tilt for Projects
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+          max: 10,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.1,
+        });
+      }
+
       const sections = document.querySelectorAll('.fade-in-section');
       const options = {
         root: null,
